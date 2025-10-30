@@ -2,11 +2,10 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WhatsAppButton = () => {
-  const whatsappNumber = "+36XXXXXXXXX"; // Replace with actual WhatsApp number
-  const message = encodeURIComponent("Hi! I'd like to inquire about luggage storage at Maria Luggage Storage.");
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=36204776265&text=Hi!+I%27d+like+to+store+luggage+today.+Details:+number+of+bags+__,+drop-off+__,+pickup+__.++Is+there+availability%3F&type=phone_number&app_absent=0";
   
   const handleWhatsAppClick = () => {
-    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+    window.open(whatsappLink, '_blank');
   };
 
   return (
@@ -16,12 +15,12 @@ const WhatsAppButton = () => {
         <Button
           onClick={handleWhatsAppClick}
           size="lg"
-          className="bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-2xl rounded-full w-16 h-16 p-0 flex items-center justify-center group transition-all hover:scale-110"
-          aria-label="Contact us on WhatsApp"
+          className="bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-2xl rounded-full w-14 h-14 md:w-16 md:h-16 p-0 flex items-center justify-center group transition-all hover:scale-110"
+          aria-label="Chat on WhatsApp"
         >
-          <MessageCircle className="w-8 h-8 group-hover:scale-110 transition-transform" />
+          <MessageCircle className="w-7 h-7 md:w-8 md:h-8 group-hover:scale-110 transition-transform" />
         </Button>
-        <div className="absolute -top-12 right-0 bg-foreground text-background px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+        <div className="absolute -top-12 right-0 bg-foreground text-background px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block">
           Chat on WhatsApp
         </div>
       </div>

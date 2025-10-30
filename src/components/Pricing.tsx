@@ -35,27 +35,27 @@ const Pricing = () => {
           <Card className="relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-2 animate-fade-in">
             <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-secondary"></div>
             <CardHeader className="pb-4">
-              <CardTitle className="text-3xl font-bold text-foreground">Single Bag</CardTitle>
-              <CardDescription className="text-lg">Perfect for solo travelers</CardDescription>
+              <CardTitle className="text-2xl md:text-3xl font-bold text-foreground">Single Bag</CardTitle>
+              <CardDescription className="text-base md:text-lg">Perfect for solo travelers</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-2 md:space-y-4">
               {singleBagPrices.map((item, index) => (
                 <div 
                   key={index} 
-                  className="flex justify-between items-center py-3 border-b border-border last:border-0"
+                  className="flex justify-between items-center py-2 md:py-3 border-b border-border last:border-0 min-h-[44px]"
                 >
-                  <span className="text-muted-foreground font-medium">{item.duration}</span>
-                  <span className="text-xl font-bold text-primary">{item.price}</span>
+                  <span className="text-sm md:text-base text-muted-foreground font-medium">{item.duration}</span>
+                  <span className="text-lg md:text-xl font-bold text-primary">{item.price}</span>
                 </div>
               ))}
               <div className="pt-4 space-y-2">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Check className="w-4 h-4 text-primary" />
-                  <span>Secure storage facility</span>
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>100% Secure storage</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Check className="w-4 h-4 text-primary" />
-                  <span>Insurance included</span>
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Central location</span>
                 </div>
               </div>
             </CardContent>
@@ -64,30 +64,30 @@ const Pricing = () => {
           {/* Group Storage Card */}
           <Card className="relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-primary animate-fade-in-delay">
             <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-accent"></div>
-            <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+            <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs md:text-sm font-semibold">
               Popular
             </div>
             <CardHeader className="pb-4">
-              <CardTitle className="text-3xl font-bold text-foreground">Group Storage</CardTitle>
-              <CardDescription className="text-lg">5 bags - Best value for groups</CardDescription>
+              <CardTitle className="text-2xl md:text-3xl font-bold text-foreground">Group Storage</CardTitle>
+              <CardDescription className="text-base md:text-lg">5 bags - Best value for groups</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-2 md:space-y-4">
               {groupPrices.map((item, index) => (
                 <div 
                   key={index} 
-                  className="flex justify-between items-center py-3 border-b border-border last:border-0"
+                  className="flex justify-between items-center py-2 md:py-3 border-b border-border last:border-0 min-h-[44px]"
                 >
-                  <span className="text-muted-foreground font-medium">{item.duration}</span>
-                  <span className="text-xl font-bold text-primary">{item.price}</span>
+                  <span className="text-sm md:text-base text-muted-foreground font-medium">{item.duration}</span>
+                  <span className="text-lg md:text-xl font-bold text-primary">{item.price}</span>
                 </div>
               ))}
               <div className="pt-4 space-y-2">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Check className="w-4 h-4 text-primary" />
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
                   <span>Up to 5 bags included</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Check className="w-4 h-4 text-primary" />
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
                   <span>Save up to 20%</span>
                 </div>
               </div>
@@ -96,8 +96,8 @@ const Pricing = () => {
         </div>
 
         {/* Payment info */}
-        <div className="mt-12 text-center">
-          <p className="text-lg text-muted-foreground">
+        <div className="mt-12 text-center px-4">
+          <p className="text-base md:text-lg text-muted-foreground">
             💳 <span className="font-semibold text-foreground">Payment upon pickup</span> — Cash or card accepted
           </p>
           <p className="text-sm text-muted-foreground mt-2">

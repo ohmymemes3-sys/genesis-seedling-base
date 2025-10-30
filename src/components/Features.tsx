@@ -5,7 +5,7 @@ const Features = () => {
     {
       icon: Shield,
       title: "100% Secure",
-      description: "Your belongings are safe with us. Fully insured storage facility with 24/7 monitoring.",
+      description: "Your belongings are safe with us. Secure storage facility with 24/7 monitoring.",
     },
     {
       icon: Clock,
@@ -25,7 +25,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="features" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -40,10 +40,10 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-xl transition-all duration-300 animate-fade-in"
+              className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-xl transition-all duration-300 animate-fade-in flex flex-col items-center text-center"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="mb-6 inline-flex p-4 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+              <div className="mb-6 flex items-center justify-center p-4 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 w-16 h-16">
                 <feature.icon className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">

@@ -1,8 +1,7 @@
 import { MapPin, Clock, MessageCircle, Mail } from "lucide-react";
 
 const Footer = () => {
-  const whatsappNumber = "+36XXXXXXXXX"; // Replace with actual WhatsApp number
-  const message = encodeURIComponent("Hi! I'd like to inquire about luggage storage.");
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=36204776265&text=Hi!+I%27d+like+to+store+luggage+today.+Details:+number+of+bags+__,+drop-off+__,+pickup+__.++Is+there+availability%3F&type=phone_number&app_absent=0";
   
   return (
     <footer className="bg-foreground text-background py-16">
@@ -16,14 +15,15 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${message}`}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 py-2 rounded-lg transition-colors font-medium"
+                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 py-2 rounded-lg transition-colors font-medium min-h-[44px]"
               >
-                <MessageCircle className="w-4 h-4" />
-                WhatsApp
+                <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                <span>Chat on WhatsApp</span>
               </a>
+              <p className="text-sm text-background/70 italic">Fastest response</p>
             </div>
           </div>
 
@@ -69,13 +69,13 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href={`https://wa.me/${whatsappNumber}?text=${message}`}
+                  href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors inline-flex items-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  Contact via WhatsApp
+                  Chat on WhatsApp
                 </a>
               </li>
             </ul>

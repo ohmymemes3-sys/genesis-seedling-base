@@ -21,7 +21,8 @@ const Location = () => {
               <CardContent className="p-0">
                 <div className="aspect-video relative">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.5847!2d19.060!3d47.4925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDI5JzMzLjAiTiAxOcKwMDMnNDUuMCJF!5e0!3m2!1sen!2sus!4v1234567890"
+                    title="Maria Luggage Storage — Map"
+                    src="https://www.google.com/maps?q=Maria%20utca%209%2C%201085%20Budapest%2C%20Hungary&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -96,26 +97,6 @@ const Location = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-primary/50 transition-colors shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary text-primary-foreground">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-foreground mb-2">
-                      Nearby Attractions
-                    </h3>
-                    <ul className="text-muted-foreground space-y-1">
-                      <li>• Hungarian National Museum (5 min walk)</li>
-                      <li>• Váci Street (10 min walk)</li>
-                      <li>• Great Market Hall (12 min walk)</li>
-                      <li>• Chain Bridge (15 min walk)</li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
