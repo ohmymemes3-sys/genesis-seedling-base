@@ -1,0 +1,126 @@
+import { MapPin, Bus, Clock } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+
+const Location = () => {
+  return (
+    <section id="location" className="py-20 bg-gradient-to-b from-muted/30 to-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Find Us in Central Budapest
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Easy to reach, close to major attractions and public transport
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Map */}
+          <div className="animate-fade-in">
+            <Card className="overflow-hidden shadow-xl border-2">
+              <CardContent className="p-0">
+                <div className="aspect-video relative">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.5847!2d19.060!3d47.4925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDI5JzMzLjAiTiAxOcKwMDMnNDUuMCJF!5e0!3m2!1sen!2sus!4v1234567890"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="absolute inset-0"
+                  ></iframe>
+                </div>
+              </CardContent>
+            </Card>
+            <div className="mt-4 flex items-start gap-3 text-muted-foreground">
+              <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+              <div>
+                <p className="font-semibold text-foreground">Maria Utca 9</p>
+                <p>1085 Budapest, Hungary</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Info Cards */}
+          <div className="space-y-6 animate-fade-in-delay">
+            <Card className="border-2 border-primary/20 hover:border-primary/50 transition-colors shadow-lg">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                    <Bus className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-foreground mb-2">
+                      To/From Airport
+                    </h3>
+                    <p className="text-muted-foreground mb-3">
+                      We're just an <span className="font-semibold text-primary">8-minute walk (700m)</span> from the <span className="font-semibold">100E Airport Shuttle Bus</span> stop at Astoria M.
+                    </p>
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <p className="text-sm font-medium text-foreground mb-1">Perfect for:</p>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>✓ Storing bags before your flight</li>
+                        <li>✓ Drop-off after airport arrival</li>
+                        <li>✓ Last-minute exploration before departure</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-primary/50 transition-colors shadow-lg">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-secondary/20 text-primary">
+                    <Clock className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-foreground mb-2">
+                      Opening Hours
+                    </h3>
+                    <div className="space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="text-muted-foreground">Monday - Sunday</span>
+                        <span className="font-semibold text-foreground">8:00 AM - 9:00 PM</span>
+                      </div>
+                      <div className="bg-accent/10 p-3 rounded-lg">
+                        <p className="text-sm text-muted-foreground">
+                          ☀️ <span className="font-medium text-foreground">Extended hours</span> during May-September (call ahead to confirm)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-primary/50 transition-colors shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-primary text-primary-foreground">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-foreground mb-2">
+                      Nearby Attractions
+                    </h3>
+                    <ul className="text-muted-foreground space-y-1">
+                      <li>• Hungarian National Museum (5 min walk)</li>
+                      <li>• Váci Street (10 min walk)</li>
+                      <li>• Great Market Hall (12 min walk)</li>
+                      <li>• Chain Bridge (15 min walk)</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Location;
