@@ -62,6 +62,8 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        card: "var(--radius-card)",
+        btn: "var(--radius-btn)",
       },
       keyframes: {
         "accordion-down": {

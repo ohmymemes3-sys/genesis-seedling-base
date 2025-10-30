@@ -1,43 +1,37 @@
 import { MapPin, Bus, Clock } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 
 const Location = () => {
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=36204776265&text=Hi!%20I%27d%20like%20to%20store%20luggage%20today.%20Details:%20bags%20__,%20drop-off%20__,%20pickup%20__.%20Is%20there%20availability%3F&type=phone_number&app_absent=0";
+
   return (
-    <section id="location" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Find Us in Central Budapest
+    <section id="location" className="py-20 md:py-24 bg-muted">
+      <div className="container mx-auto px-6 md:px-8">
+        <div className="text-center mb-16 animate-fade-in max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-4">
+            Location & Directions
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Easy to reach, close to major attractions and public transport
+          <p className="text-lg md:text-xl text-muted-foreground">
+            Central Budapest, 8-minute walk to airport shuttle
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Map */}
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
+          {/* Map - centered on Maria utca 9 */}
           <div className="animate-fade-in">
-            <Card className="overflow-hidden border">
-              <CardContent className="p-0">
-                <div className="aspect-video relative">
-                  <iframe
-                    title="Maria Luggage Storage — Map"
-                    src="https://www.google.com/maps?q=Maria%20utca%209%2C%201085%20Budapest%2C%20Hungary&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="absolute inset-0"
-                  ></iframe>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="overflow-hidden rounded-[var(--radius-card)] border-luxe shadow-luxe">
+              <iframe
+                title="Maria Luggage Storage — Map"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                style={{ border: 0, width: '100%', height: '360px' }}
+                src="https://www.google.com/maps?q=Maria%20utca%209%2C%201085%20Budapest%2C%20Hungary&output=embed"
+                allowFullScreen
+              ></iframe>
+            </div>
             <div className="mt-4 flex items-start gap-3 text-muted-foreground">
-              <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+              <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" aria-hidden="true" />
               <div>
-                <p className="font-semibold text-foreground">Maria Utca 9</p>
+                <p className="font-semibold text-heading">Maria utca 9</p>
                 <p>1085 Budapest, Hungary</p>
               </div>
             </div>
@@ -45,58 +39,64 @@ const Location = () => {
 
           {/* Info Cards */}
           <div className="space-y-6 animate-fade-in-delay">
-            <Card className="border border-primary/20 hover:border-primary transition-colors">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary text-primary-foreground">
-                    <Bus className="w-6 h-6" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-foreground mb-2">
-                      To/From Airport
-                    </h3>
-                    <p className="text-muted-foreground mb-3">
-                      We're just an <span className="font-semibold text-primary">8-minute walk (700m)</span> from the <span className="font-semibold">100E Airport Shuttle Bus</span> stop at Astoria M.
-                    </p>
-                    <div className="bg-accent p-4 rounded-lg">
-                      <p className="text-sm font-medium text-foreground mb-1">Perfect for:</p>
-                      <ul className="text-sm text-muted-foreground space-y-1">
-                        <li>✓ Storing bags before your flight</li>
-                        <li>✓ Drop-off after airport arrival</li>
-                        <li>✓ Last-minute exploration before departure</li>
-                      </ul>
-                    </div>
+            {/* Airport note */}
+            <div className="p-6 rounded-[var(--radius-card)] bg-card border-luxe">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-primary text-primary-foreground flex-shrink-0">
+                  <Bus className="w-6 h-6" aria-hidden="true" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-heading mb-2">
+                    To/From Airport
+                  </h3>
+                  <p className="text-muted-foreground mb-3">
+                    <span className="font-semibold text-primary">8-minute walk (700 m)</span> to the <span className="font-semibold">100E Airport Shuttle</span> stop at Astoria M.
+                  </p>
+                  <div className="bg-muted p-4 rounded-lg">
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Store bags before your flight</li>
+                      <li>• Drop-off after arrival</li>
+                      <li>• Last-minute city exploration</li>
+                    </ul>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="border hover:border-primary transition-colors">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary text-primary-foreground">
-                    <Clock className="w-6 h-6" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-foreground mb-2">
-                      Opening Hours
-                    </h3>
-                    <div className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-muted-foreground">Monday - Sunday</span>
-                        <span className="font-semibold text-foreground">8:00 AM - 9:00 PM</span>
-                      </div>
-                      <div className="bg-accent p-3 rounded-lg">
-                        <p className="text-sm text-muted-foreground">
-                          ☀️ <span className="font-medium text-foreground">Extended hours</span> during May-September (call ahead to confirm)
-                        </p>
-                      </div>
+            {/* Hours & Contact */}
+            <div className="p-6 rounded-[var(--radius-card)] bg-card border-luxe">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-primary text-primary-foreground flex-shrink-0">
+                  <Clock className="w-6 h-6" aria-hidden="true" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-heading mb-3">
+                    Hours & Contact
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-muted-foreground">Daily</span>
+                      <span className="font-semibold text-heading">8:00 – 21:00</span>
                     </div>
+                    <div className="bg-muted p-3 rounded-lg">
+                      <p className="text-sm text-muted-foreground">
+                        Extended hours May–September<br />
+                        <span className="text-xs">(call ahead to confirm)</span>
+                      </p>
+                    </div>
+                    <a 
+                      href={whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-full bg-primary text-primary-foreground hover:opacity-90 px-6 py-3 text-sm font-semibold rounded-[var(--radius-btn)] transition-opacity mt-4"
+                    >
+                      Chat on WhatsApp
+                    </a>
+                    <p className="text-xs text-muted-foreground text-center italic">Fastest response</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-
+              </div>
+            </div>
           </div>
         </div>
       </div>

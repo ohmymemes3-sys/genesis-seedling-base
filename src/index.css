@@ -2,61 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. Flat color system with NO GRADIENTS.
+/* Luxe Premium Design System - Flat Colors Only, NO GRADIENTS
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Flat color system - NO GRADIENTS */
-    /* Background: #ffffff */
-    --background: 0 0% 100%;
-    /* Text: #111111 */
-    --foreground: 0 0% 7%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 7%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 7%;
-
+    /* Luxe Flat Color System */
     /* Primary: #4292f1 */
     --primary: 210 85% 60%;
     --primary-foreground: 0 0% 100%;
     
-    /* Accent/Secondary: #f5f7fa */
-    --secondary: 210 40% 97%;
-    --secondary-foreground: 0 0% 7%;
+    /* Background: #ffffff */
+    --background: 0 0% 100%;
+    
+    /* Text: #0a0a0a (body), #111111 (headings) */
+    --foreground: 0 0% 4%;
+    --heading: 0 0% 7%;
 
-    --muted: 210 40% 97%;
-    --muted-foreground: 0 0% 40%;
+    /* Cards & surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
 
-    --accent: 210 40% 97%;
-    --accent-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+
+    /* Divider/soft surface: #f5f7fa */
+    --muted: 210 40% 97.5%;
+    --muted-foreground: 0 0% 35%;
+
+    --secondary: 210 40% 97.5%;
+    --secondary-foreground: 0 0% 4%;
+
+    --accent: 210 40% 97.5%;
+    --accent-foreground: 0 0% 4%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 30% 90%;
-    --input: 210 30% 90%;
+    /* Borders - crisp 1px dividers */
+    --border: 210 20% 92%;
+    --input: 210 20% 92%;
     --ring: 210 85% 60%;
 
-    --radius: 0.5rem;
+    /* Luxe radii */
+    --radius: 1rem;
+    --radius-card: 1rem;
+    --radius-btn: 1rem;
+    --radius-input: 0.25rem;
     
-    /* Minimal shadows only */
-    --shadow-minimal: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-    --shadow-card: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    /* Minimal elevation - 1px border or subtle shadow */
+    --shadow-minimal: 0 0 0 1px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
     
-    /* Smooth transitions - fade/scale only */
-    --transition-smooth: all 0.2s ease-in-out;
+    /* Premium transitions - 150-200ms, scale/fade only */
+    --transition-base: 150ms ease;
+    --transition-smooth: 200ms ease;
 
-    --sidebar-background: 210 40% 97%;
+    --sidebar-background: 210 40% 97.5%;
     --sidebar-foreground: 0 0% 7%;
     --sidebar-primary: 210 85% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 97%;
-    --sidebar-accent-foreground: 0 0% 7%;
-    --sidebar-border: 210 30% 90%;
+    --sidebar-accent: 210 40% 97.5%;
+    --sidebar-accent-foreground: 0 0% 4%;
+    --sidebar-border: 210 20% 92%;
     --sidebar-ring: 210 85% 60%;
   }
 
@@ -109,15 +118,48 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 400;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: hsl(var(--heading));
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
     font-weight: 600;
   }
 
   strong, b {
     font-weight: 600;
+  }
+}
+
+/* Luxe utility classes */
+@layer utilities {
+  .text-heading {
+    color: hsl(var(--heading));
+  }
+  
+  .transition-luxe {
+    transition: var(--transition-smooth);
+  }
+  
+  .shadow-luxe {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .border-luxe {
+    border: 1px solid hsl(var(--border));
   }
 }
