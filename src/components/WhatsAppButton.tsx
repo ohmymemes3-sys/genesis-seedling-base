@@ -15,12 +15,12 @@ const WhatsAppButton = () => {
         <Button
           onClick={handleWhatsAppClick}
           size="lg"
-          className="bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-2xl rounded-full w-14 h-14 md:w-16 md:h-16 p-0 flex items-center justify-center group transition-all hover:scale-110"
+          className="bg-[#25D366] hover:opacity-90 text-white rounded-full w-14 h-14 md:w-16 md:h-16 p-0 flex items-center justify-center group transition-opacity"
           aria-label="Chat on WhatsApp"
         >
-          <MessageCircle className="w-7 h-7 md:w-8 md:h-8 group-hover:scale-110 transition-transform" />
+          <MessageCircle className="w-7 h-7 md:w-8 md:h-8" />
         </Button>
-        <div className="absolute -top-12 right-0 bg-foreground text-background px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block">
+        <div className="absolute -top-12 right-0 bg-foreground text-background px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block">
           Chat on WhatsApp
         </div>
       </div>

@@ -7,17 +7,13 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-secondary to-primary">
-      {/* Decorative background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-background rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
-      </div>
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-primary">
+      {/* Clean flat design - no decorative patterns */}
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           {/* Location badge */}
-          <div className="inline-flex items-center gap-2 bg-background/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg mb-6 min-h-[44px]">
+          <div className="inline-flex items-center gap-2 bg-background px-4 py-2 rounded-lg mb-6 min-h-[44px]">
             <MapPin className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-foreground">Maria utca 9, Budapest 1085</span>
           </div>
@@ -25,7 +21,7 @@ const Hero = () => {
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
             Store Your Luggage.<br />
-            <span className="text-accent">Explore Budapest.</span>
+            <span className="text-primary-foreground">Explore Budapest.</span>
           </h1>
 
           {/* Subtitle */}
@@ -38,7 +34,7 @@ const Hero = () => {
             <Button 
               size="lg"
               onClick={() => window.open("https://api.whatsapp.com/send/?phone=36204776265&text=Hi!+I%27d+like+to+store+luggage+today.+Details:+number+of+bags+__,+drop-off+__,+pickup+__.++Is+there+availability%3F&type=phone_number&app_absent=0", '_blank')}
-              className="bg-background text-primary hover:bg-background/90 shadow-xl px-8 py-6 text-lg font-semibold rounded-xl transition-all hover:scale-105 min-h-[44px]"
+              className="bg-background text-primary hover:opacity-90 px-8 py-6 text-lg font-semibold rounded-lg transition-opacity min-h-[44px]"
             >
               Chat on WhatsApp
             </Button>
@@ -46,7 +42,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               onClick={scrollToPricing}
-              className="bg-transparent border-2 border-background text-primary-foreground hover:bg-background/10 px-8 py-6 text-lg font-semibold rounded-xl min-h-[44px]"
+              className="bg-transparent border-2 border-background text-primary-foreground hover:bg-white/10 px-8 py-6 text-lg font-semibold rounded-lg min-h-[44px]"
             >
               View Pricing
             </Button>

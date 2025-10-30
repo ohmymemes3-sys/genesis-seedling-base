@@ -40,10 +40,10 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-xl transition-all duration-300 animate-fade-in flex flex-col items-center text-center"
+              className="group p-8 rounded-lg bg-card border border-border hover:border-primary transition-colors duration-200 animate-fade-in flex flex-col items-center text-center"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="mb-6 flex items-center justify-center p-4 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 w-16 h-16">
+              <div className="mb-6 flex items-center justify-center p-4 rounded-lg bg-primary text-primary-foreground w-16 h-16">
                 <feature.icon className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">

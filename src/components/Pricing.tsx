@@ -19,7 +19,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-gradient-to-b from-background to-muted/30">
+    <section id="pricing" className="py-20 bg-accent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -32,8 +32,7 @@ const Pricing = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Single Bag Card */}
-          <Card className="relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-2 animate-fade-in">
-            <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-secondary"></div>
+          <Card className="relative overflow-hidden transition-all duration-200 border animate-fade-in">
             <CardHeader className="pb-4">
               <CardTitle className="text-2xl md:text-3xl font-bold text-foreground">Single Bag</CardTitle>
               <CardDescription className="text-base md:text-lg">Perfect for solo travelers</CardDescription>
@@ -62,9 +61,8 @@ const Pricing = () => {
           </Card>
 
           {/* Group Storage Card */}
-          <Card className="relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-primary animate-fade-in-delay">
-            <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-accent"></div>
-            <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs md:text-sm font-semibold">
+          <Card className="relative overflow-hidden transition-all duration-200 border-2 border-primary animate-fade-in-delay">
+            <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-lg text-xs md:text-sm font-semibold">
               Popular
             </div>
             <CardHeader className="pb-4">

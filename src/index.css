@@ -2,14 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Definition of the design system. Flat color system with NO GRADIENTS.
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Clean white background with blue primary */
+    /* Flat color system - NO GRADIENTS */
+    /* Background: #ffffff */
     --background: 0 0% 100%;
+    /* Text: #111111 */
     --foreground: 0 0% 7%;
 
     --card: 0 0% 100%;
@@ -18,47 +20,43 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 7%;
 
-    /* Primary blue #4292f1 */
+    /* Primary: #4292f1 */
     --primary: 210 85% 60%;
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary and accents */
-    --secondary: 210 40% 96.1%;
+    /* Accent/Secondary: #f5f7fa */
+    --secondary: 210 40% 97%;
     --secondary-foreground: 0 0% 7%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 210 40% 97%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 210 85% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 210 40% 97%;
+    --accent-foreground: 0 0% 7%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 210 30% 90%;
+    --input: 210 30% 90%;
     --ring: 210 85% 60%;
 
-    --radius: 0.875rem;
-
-    /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 85% 60%) 0%, hsl(210 85% 70%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    --radius: 0.5rem;
     
-    /* Shadows */
-    --shadow-warm: 0 10px 40px -10px hsl(210 85% 60% / 0.25);
-    --shadow-card: 0 4px 20px -4px hsl(0 0% 7% / 0.08);
+    /* Minimal shadows only */
+    --shadow-minimal: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --shadow-card: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
     
-    /* Smooth transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Smooth transitions - fade/scale only */
+    --transition-smooth: all 0.2s ease-in-out;
 
-    --sidebar-background: 210 40% 96%;
-    --sidebar-foreground: 0 0% 20%;
+    --sidebar-background: 210 40% 97%;
+    --sidebar-foreground: 0 0% 7%;
     --sidebar-primary: 210 85% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 92%;
+    --sidebar-accent: 210 40% 97%;
     --sidebar-accent-foreground: 0 0% 7%;
-    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-border: 210 30% 90%;
     --sidebar-ring: 210 85% 60%;
   }
 
@@ -109,5 +107,17 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+  }
+
+  strong, b {
+    font-weight: 600;
   }
 }
